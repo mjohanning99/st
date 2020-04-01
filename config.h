@@ -18,7 +18,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/bash";
+static char *shell = "/bin/zsh";
 char *utmp = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
@@ -44,7 +44,7 @@ static unsigned int tripleclicktimeout = 600;
 int allowaltscreen = 1;
 
 /* frames per second st should at maximum draw to the screen */
-static unsigned int xfps = 120;
+static unsigned int xfps = 300;
 static unsigned int actionfps = 30;
 
 /*
@@ -56,7 +56,7 @@ static unsigned int blinktimeout = 800;
 /*
  * thickness of underline and bar cursors
  */
-static unsigned int cursorthickness = 2;
+static unsigned int cursorthickness = 4;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
@@ -97,8 +97,8 @@ static unsigned int cursorshape = 6;
  * Default columns and rows numbers
  */
 
-static unsigned int cols = 100;
-static unsigned int rows = 35;
+static unsigned int cols = 110;
+static unsigned int rows = 30;
 
 /*
  * Default colour and shape of the mouse cursor
@@ -150,8 +150,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-  { MODCTRL,              XK_j,           kscrolldown,      {.i = -1} },
-  { MODCTRL,              XK_k,           kscrollup,    {.i = -1} },
+  { MODCTRL,              XK_j,           kscrolldown,    {.i = -1} },
+  { MODCTRL,              XK_k,           kscrollup,      {.i = -1} },
 };
 
 /*
