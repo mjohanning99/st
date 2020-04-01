@@ -1,34 +1,9 @@
-st - simple terminal
---------------------
-st is a simple terminal emulator for X which sucks less.
+# Marvin's fork of suckless' st
+This is my fork of suckless' simple terminal (st for short). It includes pywal, has the patch applied for scrolling through the history (with vim controls) and a bunch of other stuff.
 
+## Prerequisites
+You will need the Xlib header files for building the application; but they should already be installed on your machine if you're running GNU/Linux. I also use pywal for setting the color theme, you will therefore need to install pywal and run it at least once. Then open the `config.h` file and change the path at the top to your local user's one.
 
-Requirements
-------------
-In order to build st you need the Xlib header files.
-
-
-Installation
-------------
-Edit config.mk to match your local setup (st is installed into
-the /usr/local namespace by default).
-
-Afterwards enter the following command to build and install st (if
-necessary as root):
-
-    make clean install
-
-
-Running st
-----------
-If you did not install st with make clean install, you must compile
-the st terminfo entry with the following command:
-
-    tic -sx st.info
-
-See the man page for additional details.
-
-Credits
--------
-Based on Aurélien APTEL <aurelien dot aptel at gmail dot com> bt source code.
-
+## Installation
+You can edit the `config.mk` if you wish to change the setup according to your needs (it defaults to installing to /usr/local). 
+Afterwards, you can simply run `make clean install`
